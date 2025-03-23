@@ -1,0 +1,117 @@
+
+
+
+.contact-page {
+  padding: 6rem 1rem;
+  /* background: linear-gradient(135deg, #1a1f2c 0%, #121620 100%); */
+  background-color: #0e1118;
+  color: #ffffff;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-info-card {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-form-card {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 0.5rem;
+  color: #ffffff;
+}
+
+.form-group textarea {
+  min-height: 150px;
+}
+.contact-map-section {
+  margin-bottom: 3rem;
+}
+
+.contact-map-card {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.map-container {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.map-details {
+  text-align: center;
+}
+
+.map-details .feature-description {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .map-container iframe {
+    height: 250px;
+  }
+}
+
+.contact-social-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-icon {
+  color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.social-icon.blue:hover { color: #60a5fa; }
+.social-icon.teal:hover { color: #5eead4; }
+.social-icon.purple:hover { color: #a855f7; }
+
+.contact-faq-section .faq-item {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

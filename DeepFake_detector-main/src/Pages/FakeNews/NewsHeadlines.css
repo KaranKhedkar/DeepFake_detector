@@ -1,0 +1,152 @@
+.news-headlines-section {
+  padding: 6rem 1rem;
+  /* background: linear-gradient(135deg, #1a1f2c 0%, #121620 100%); */
+  background-color: #0e1118;
+  color: #ffffff;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.news-card {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.news-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.news-source {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.news-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.news-modal {
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.news-modal-content {
+  padding: 2rem;
+}
+
+.news-modal-content h2 {
+  color: #60a5fa;
+  margin-bottom: 1rem;
+}
+
+.news-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.news-analysis-result {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #60a5fa;
+}
+
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-modal {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.feature-link.blue {
+  color: #60a5fa;
+}
+
+.feature-link.blue:hover {
+  color: #3b82f6;
+  transform: translateX(5px);
+}
+
+.feature-link.teal {
+  color: #5eead4;
+}
+
+.feature-link.teal:hover {
+  color: #2dd4bf;
+  transform: translateX(5px);
+}
+
+.feature-link .arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.feature-link:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+.news-footer .feature-link {
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+.news-modal-actions .feature-link {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.news-analysis-result span {
+  font-weight: bold;
+  color: #60a5fa;
+}
